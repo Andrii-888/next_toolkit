@@ -1,13 +1,8 @@
-// "use client";
-// import { useRef } from "react";
-// import { Provider } from "react-redux";
-// import { store } from "../lib/store";
+"use client";
 
-// export default function StoreProvider({ children }) {
-//   const storeref = useRef();
-//   if (!storeref.current) {
-//     storeref.current = store();
-//   }
+import { store } from "@/lib/store";
+import { Provider } from "react-redux";
 
-//   return <Provider store={storeref.current}>{children}</Provider>;
-// }
+export default function StoreProvider({ children }) {
+  return <Provider store={store}>{children}</Provider>;
+}

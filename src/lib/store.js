@@ -6,9 +6,3 @@ export const store = configureStore({
     theme: themeReducer,
   },
 });
-
-// export const store = () => {
-//   return configureStore({
-//     reducer: {},
-//   });
-// };

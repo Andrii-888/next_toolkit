@@ -4,8 +4,9 @@ import Header from "@/components/header";
 
 import ExampleClientComponent from "@/components/example/ExampleClientComponent";
 // import LanguageChanger from "@/components/Language/LanguageChanger";
-import initTranslations from "./i18n";
+import initTranslations from "../i18n";
 import TranslationsProvider from "@/components/translationsprovider/TranslationsProvider";
+
 const i18nNamespaces = ["home"];
 
 async function Home({ params: { lang: locale } }) {
@@ -20,12 +21,10 @@ async function Home({ params: { lang: locale } }) {
       <Header />
 
       <main className={styles.main}>
-        <h1 className="text-[40px]">{t("header")}</h1>
-        <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-          Badge
-        </span>
+        <h1>{t("header")}</h1>
         <ExampleClientComponent />
         <Link href="/about">{t("page2")}</Link>
+       
       </main>
     </TranslationsProvider>
   );

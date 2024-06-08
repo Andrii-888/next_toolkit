@@ -2,5 +2,12 @@
   "title": "signin",
   "header": "www",
   "signin": "signin",
-  "signup": "signup"
+  "signup": "signup",
+  "lang": [
+    { "title": "En", "value": "en" },
+    { "title": "De", "value": "de" },
+    { "title": "Fr", "value": "fr" },
+    { "title": "Ru", "value": "ru" },
+    { "title": "It", "value": "it" }
+  ]
 }

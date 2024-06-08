@@ -1,4 +1,11 @@
 {
   "title": "s'dfgnerp",
-  "header": "w()()w"
+  "header": "w()()w",
+  "lang": [
+    { "title": "En", "value": "en" },
+    { "title": "De", "value": "de" },
+    { "title": "Fr", "value": "fr" },
+    { "title": "Ru", "value": "ru" },
+    { "title": "It", "value": "it" }
+  ]
 }

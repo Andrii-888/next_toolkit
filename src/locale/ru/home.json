@@ -2,5 +2,12 @@
   "title": "зарегистрироваться",
   "header": "pppppp",
   "signin": "войти",
-  "signup": "зарегистрироваться"
+  "signup": "зарегистрироваться",
+  "lang": [
+    { "title": "Ан", "value": "en" },
+    { "title": "Ге", "value": "de" },
+    { "title": "Фр", "value": "fr" },
+    { "title": "Ру", "value": "ru" },
+    { "title": "Ит", "value": "it" }
+  ]
 }

@@ -1,11 +1,11 @@
-import Link from "next/link";
-import styles from "./page.module.css";
+// import styles from "./page.module.css";
 import Header from "@/components/header";
 
 import ExampleClientComponent from "@/components/example/ExampleClientComponent";
-// import LanguageChanger from "@/components/Language/LanguageChanger";
 import initTranslations from "./i18n";
 import TranslationsProvider from "@/components/translationsprovider/TranslationsProvider";
+import ProductsList from "@/components/productsList";
+import Sidebar from "@/components/sidebar";
 const i18nNamespaces = ["home"];
 
 async function Home({ params: { lang: locale } }) {
@@ -19,13 +19,18 @@ async function Home({ params: { lang: locale } }) {
     >
       <Header />
 
-      <main className={styles.main}>
-        <h1 className="text-[40px]">{t("header")}</h1>
-        <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-          Badge
-        </span>
-        <ExampleClientComponent />
-        <Link href="/about">{t("page2")}</Link>
+      <main className="pt-20">
+        <div className="mx-auto my-0 max-w-[1024px]">
+          <div>
+            <aside>
+              <Sidebar />
+            </aside>
+          </div>
+          <h1 className="text-[40px]">{t("header")}</h1>
+
+          <ExampleClientComponent />
+          <ProductsList />
+        </div>
       </main>
     </TranslationsProvider>
   );

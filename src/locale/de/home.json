@@ -1,4 +1,11 @@
 {
   "title": "wpeitgb",
-  "header": "TRew"
+  "header": "TRew",
+  "lang": [
+    { "title": "En", "value": "en" },
+    { "title": "De", "value": "de" },
+    { "title": "Fr", "value": "fr" },
+    { "title": "Ru", "value": "ru" },
+    { "title": "It", "value": "it" }
+  ]
 }

@@ -1,4 +1,11 @@
 {
   "title": "a'sfknb",
-  "header": "w2w5w"
+  "header": "w2w5w",
+  "lang": [
+    { "title": "En", "value": "en" },
+    { "title": "De", "value": "de" },
+    { "title": "Fr", "value": "fr" },
+    { "title": "Ru", "value": "ru" },
+    { "title": "It", "value": "it" }
+  ]
 }

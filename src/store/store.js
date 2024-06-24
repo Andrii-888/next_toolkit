@@ -19,3 +19,4 @@ export const store = configureStore({
   // Adding the logger middleware
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
+

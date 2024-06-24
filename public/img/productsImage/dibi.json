@@ -1,0 +1,327 @@
+[
+  {
+    "title": "Taç Gracie Ranforce Double Duvet Cover Set Blue",
+    "image": ["/img/productsImage/1000047734.webp"],
+    "productCode": 1000047734,
+    "subCategory": "Home",
+    "price": 3234,
+    "description": [
+      "100% Cotton",
+      "Bed Sheet: 240x260 cm",
+      "Standard Pillow Case: 50x70 cm 2 Pieces",
+      "Product Type: Duvet Cover Sets"
+    ],
+    "rating": { "rate": 4.3, "feedBackCount": 300 },
+    "material": "cotton",
+    "category": "Home textile",
+    "availabileSize": ["double"],
+    "sizes": {
+      "double": {
+        "size": "double",
+        "title": "Double",
+        "price": "150",
+        "color": ["blue"],
+        "availability": 0
+      }
+    }
+  },
+  {
+    "title": "Taç Benin Ranforce Double Duvet Cover Set Brown",
+    "image": ["/img/productsImage/1000046633.webp"],
+    "productCode": 1000046633,
+    "subCategory": "Home",
+    "price": 2334,
+    "description": [
+      "100% Cotton",
+      "Duvet Cover: 200X220 cm",
+      "Bed Sheet: 240X260 cm",
+      "2 Flap Bags: 40X40 cm"
+    ],
+    "rating": { "rate": 4.3, "feedBackCount": 300 },
+    "material": "cotton",
+    "category": "Home textile",
+    "availabileSize": ["double"],
+    "sizes": {
+      "double": {
+        "size": "double",
+        "title": "Double",
+        "price": "150",
+        "color": ["Brown"],
+        "availability": 0
+      }
+    }
+  },
+  {
+    "title": "Taç Disa Ranforce Double Duvet Cover Set Blue",
+    "image": ["/img/productsImage/1000046639.webp"],
+    "productCode": 1000046639,
+    "subCategory": "Home",
+    "price": 2394,
+    "description": [
+      "100% Cotton",
+      "Duvet Cover: 200X220 cm",
+      "Bed Sheet: 240X260 cm",
+      "Standard Pillow Case: 50X70 cm",
+      "2 Flap Bags: 40X40 cm",
+      "Product Type: Duvet Cover Sets"
+    ],
+    "rating": { "rate": 4.3, "feedBackCount": 300 },
+    "material": "cotton",
+    "category": "Home textile",
+    "availabileSize": ["double"],
+    "sizes": {
+      "double": {
+        "size": "double",
+        "title": "Double",
+        "price": "150",
+        "color": ["blue"],
+        "availability": 0
+      }
+    }
+  },
+  {
+    "title": "Brielle Double Satin Duvet Cover Set Black",
+    "image": ["/img/productsImage/1000047667.webp"],
+    "productCode": 1000047667,
+    "subCategory": "Home",
+    "price": 2094,
+    "description": [
+      "100% Cotton",
+      "Duvet Cover: 240x220 cm",
+      "Pillowcase: 60x70 cm 2 Pieces",
+      "Product Type: Duvet Cover Sets"
+    ],
+    "rating": { "rate": 4.3, "feedBackCount": 300 },
+    "material": "cotton",
+    "category": "Home textile",
+    "availabileSize": ["double"],
+    "sizes": {
+      "double": {
+        "size": "double",
+        "title": "Double",
+        "price": "150",
+        "color": ["black"],
+        "availability": 0
+      }
+    }
+  },
+  {
+    "title": "Taç Riven Piping Single Duvet Cover Set Anthracite",
+    "image": ["/img/productsImage/1000046844.webp"],
+    "productCode": 1000046844,
+    "subCategory": "Home",
+    "price": 1094,
+    "description": [
+      "100% Cotton",
+      "Duvet Cover: 160x220 cm",
+      "Bed Sheet: 180x260 cm",
+      "Vol Pillow Case: 50x70 cm",
+      "Case: 50x70 cm 1 piece Box",
+      "Product Type: Duvet Cover Sets"
+    ],
+    "rating": { "rate": 4.3, "feedBackCount": 300 },
+    "material": "cotton",
+    "category": "Home textile",
+    "availabileSize": ["double"],
+    "sizes": {
+      "double": {
+        "size": "double",
+        "title": "Double",
+        "price": "150",
+        "color": ["pink", "grey", "navy blue", "black"],
+        "availability": 0
+      }
+    }
+  },
+  {
+    "title": "Taç Cassie Satin Double Duvet Cover Set Green",
+    "image": ["/img/productsImage/1000047752.webp"],
+    "productCode": 1000047752,
+    "subCategory": "Home",
+    "price": 3204,
+    "description": [
+      "100% Cotton",
+      "Duvet cover: 200x220 cm",
+      "Bed sheet: 230x260 cm",
+      "Pillow: 50x70 cm",
+      "Product Type: Duvet Cover Sets"
+    ],
+    "rating": { "rate": 4.3, "feedBackCount": 300 },
+    "material": "cotton",
+    "category": "Home textile",
+    "availabileSize": ["double"],
+    "sizes": {
+      "double": {
+        "size": "double",
+        "title": "Double",
+        "price": "150",
+        "color": ["green"],
+        "availability": 0
+      }
+    }
+  },
+  {
+    "title": "Taç Crumbly Ranforce Double Duvet Cover Set Gray",
+    "image": ["/img/productsImage/1000048138.webp"],
+    "productCode": 1000048138,
+    "subCategory": "Home",
+    "price": 3200,
+    "description": [
+      "100% Cotton",
+      "Duvet Cover: 200x220 cm",
+      "Bed Sheet: 240x260 cm",
+      "Standard Pillow Case: 50x70 cm 2 Pieces",
+      "Product Type: Duvet Cover Sets"
+    ],
+    "rating": { "rate": 4.3, "feedBackCount": 300 },
+    "material": "cotton",
+    "category": "Home textile",
+    "availabileSize": ["double"],
+    "sizes": {
+      "double": {
+        "size": "double",
+        "title": "Double",
+        "price": "150",
+        "color": ["grey"],
+        "availability": 0
+      }
+    }
+  },
+  {
+    "title": "Taç Joanne Satin Double Duvet Cover Set Blue",
+    "image": ["/img/productsImage/1000047753.webp"],
+    "productCode": 1000047753,
+    "subCategory": "Home",
+    "price": 1200,
+    "description": [
+      "100% Cotton",
+      "Duvet cover: 200x220 cm",
+      "Bed sheet: 230x260 cm",
+      "Pillow: 50x70 cm Box",
+      "Product Type: Duvet Cover Sets"
+    ],
+    "rating": { "rate": 4.3, "feedBackCount": 300 },
+    "material": "cotton",
+    "category": "Home textile",
+    "availabileSize": ["double"],
+    "sizes": {
+      "double": {
+        "size": "double",
+        "title": "Double",
+        "price": "150",
+        "color": ["blue"],
+        "availability": 0
+      }
+    }
+  },
+  {
+    "title": "Taç Lesly Satin Double Duvet Cover Set Cream Color",
+    "image": ["/img/productsImage/1000047537.webp"],
+    "productCode": 1000047537,
+    "subCategory": "Home",
+    "price": 5200,
+    "description": [
+      "100% Cotton",
+      "Duvet cover: 200x220 cm",
+      "Bed sheet: 230x260 cm",
+      "Pillow: 50x70 cm Box",
+      "Product Type: Duvet Cover Sets"
+    ],
+    "rating": { "rate": 4.3, "feedBackCount": 300 },
+    "material": "cotton",
+    "category": "Home textile",
+    "availabileSize": ["double"],
+    "sizes": {
+      "double": {
+        "size": "double",
+        "title": "Double",
+        "price": "150",
+        "color": ["cream"],
+        "availability": 0
+      }
+    }
+  },
+  {
+    "title": "Taç Teddy Polar Double Warmer Set Gray",
+    "image": ["/img/productsImage/1000046226.webp"],
+    "productCode": 1000046226,
+    "subCategory": "Home",
+    "price": 850,
+    "description": [
+      "100% Cotton",
+      "Bed Sheet: 240X260 cm",
+      "Quilt: 195X215 cm Standard Pillow",
+      "Case: 50X70 cm 2 Pieces Fiber Filled",
+      "Pillow Case: 50X70 cm 2 Pieces",
+      "Product Type: Sleeping sets"
+    ],
+    "rating": { "rate": 4.3, "feedBackCount": 300 },
+    "material": "cotton",
+    "category": "Home textile",
+    "availabileSize": ["double"],
+    "sizes": {
+      "double": {
+        "size": "double",
+        "title": "Double",
+        "price": "150",
+        "color": ["grey"],
+        "availability": 0
+      }
+    }
+  },
+  {
+    "title": "Taç Basic Ranforce Tek Kişilik Nevresim Taş",
+    "image": ["/img/productsImage/1000000073.webp"],
+    "productCode": 1000000073,
+    "subCategory": "Home",
+    "price": 3850,
+    "description": [
+      "100% Cotton",
+      "Nevresim: 160X220 cm",
+      "Product Type: Duvet Covers",
+      "Kord Biyeli Yastik Kilifi: 50X70 cm",
+      "Pillow Case: 50X70 cm 2 Pieces",
+      "Product Type: Sleeping sets"
+    ],
+    "rating": { "rate": 4.3, "feedBackCount": 300 },
+    "material": "cotton",
+    "category": "Home textile",
+    "availabileSize": ["double"],
+    "sizes": {
+      "double": {
+        "size": "single",
+        "title": "Single",
+        "price": "150",
+        "color": ["grey"],
+        "availability": 0
+      }
+    }
+  },
+  {
+    "title": "Taç Doris Ranforce Double Duvet Cover Set Blue",
+    "image": ["/img/productsImage/1000046628.jpeg"],
+    "productCode": 1000046628,
+    "subCategory": "Home",
+    "price": 3800,
+    "description": [
+      "100% Cotton",
+      "Duvet Cover: 200X220 cm",
+      "Bed Sheet: 240X260 cm",
+      "Standard Pillow Case: 50X70 cm 2 Flap Bags: 40X40 cm",
+      "Product Type: Duvet Cover Sets"
+    ],
+    "rating": { "rate": 4.3, "feedBackCount": 300 },
+    "material": "cotton",
+    "category": "Home textile",
+    "availabileSize": ["double"],
+    "sizes": {
+      "double": {
+        "size": "double",
+        "title": "Double",
+        "price": "150",
+        "color": ["blue"],
+        "availability": 0
+      }
+    }
+  }
+]

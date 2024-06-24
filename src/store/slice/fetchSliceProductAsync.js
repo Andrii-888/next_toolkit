@@ -1,10 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-const fetchProduct = createAsyncThunk(
-  "product/fetchProduct",
+const fetchProducts = createAsyncThunk(
+  "products/fetchProducts",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await fetch("https://fakestoreapi.com/products");
+      const response = await fetch(`http://localhost:8000/api/products`);
 
       if (!response.ok) {
         const data = await response.json();
@@ -12,12 +12,27 @@ const fetchProduct = createAsyncThunk(
       }
 
       const data = await response.json();
-      console.log(data, 3333);
+
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
     }
   }
 );
-
-export { fetchProduct };
+const fetchProductById = createAsyncThunk(
+  "products/fetchProduct",
+  async (id, { rejectWithValue }) => {
+    try {
+      const response = await fetch(`http://localhost:8000/api/products/${id}`);
+      if (!response.ok) {
+        const data = await response.json();
+        return rejectWithValue({ ...data.message, status: false });
+      }
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+export { fetchProducts, fetchProductById };

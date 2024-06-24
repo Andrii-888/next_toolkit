@@ -39,18 +39,21 @@ export default function LanguageChanger() {
   };
 
   return (
-    <select
-      onChange={handleChange}
-      value={currentLocale}
-      className="bg-[#f1f1f1] max-w-[120px] w-full border-[#ccc] text-base border-2 border-solid
-      outline-none rounded-md p-3 py-1  
-      duration-200 ease-in transition focus:outline-none focus:border-[rgb(127, 101, 69)] focus:bg-white"
-    >
-      <option value="en">En</option>
-      <option value="de">De</option>
-      <option value="it">It</option>
-      <option value="fr">Fr</option>
-      <option value="ru">Ru</option>
-    </select>
+    <div className="flex mx-2 justify-center grow relative max-w-lg items-center">
+      <select
+        onChange={handleChange}
+        value={currentLocale}
+        className="h-[36px] py-0 px-1 bg-[#f1f1f1] border-[#ccc] 
+        text-base border-2 border-solid outline-none rounded-md duration-100 
+        ease-in transition focus:outline-none
+        focus:bg-white"
+      >
+        <option value="en">En</option>
+        <option value="de">De</option>
+        <option value="it">It</option>
+        <option value="fr">Fr</option>
+        <option value="ru">Ru</option>
+      </select>
+    </div>
   );
 }

@@ -1,50 +1,6 @@
-// import { createSlice } from "@reduxjs/toolkit";
-// import { fetchProductById, fetchProducts } from "./fetchSliceProductAsync";
-
-// const productsSliceReducer = createSlice({
-//   name: "products",
-//   initialState: {
-//     products: {},
-//     product: {},
-//     loading: true,
-//     error: null,
-//   },
-//   reducers: {},
-//   extraReducers: (builder) => {
-//     builder.addCase(fetchProducts.pending, (state) => {
-//       state.loading = true;
-//       state.error = null;
-//     });
-//     builder.addCase(fetchProducts.fulfilled, (state, action) => {
-//       state.loading = false;
-//       state.products = action.payload.reduce((acc, current) => {
-//         acc[current._id] = current;
-//         return acc;
-//       }, {});
-//     });
-//     builder.addCase(fetchProducts.rejected, (state, action) => {
-//       state.loading = false;
-//       state.error = action.payload;
-//     });
-//     builder.addCase(fetchProductById.pending, (state) => {
-//       state.loading = true;
-//       state.error = null;
-//     });
-//     builder.addCase(fetchProductById.fulfilled, (state, action) => {
-//       state.loading = false;
-//       state.product = action.payload;
-//     });
-//     builder.addCase(fetchProductById.rejected, (state, action) => {
-//       state.loading = false;
-//       state.error = action.payload;
-//     });
-//   },
-// });
-
-// export default productsSliceReducer.reducer;
-
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchProductById, fetchProducts } from "./fetchSliceProductAsync";
+import { fetchAddToCart } from "./fetchSliceCartAsync";
 
 const productsSlice = createSlice({
   name: "products",
@@ -53,30 +9,56 @@ const productsSlice = createSlice({
     product: {},
     loading: true,
     error: null,
+    favorites: [],
+    cart: [],
   },
   reducers: {
     toggleFavorite: (state, action) => {
-      const product = state.products[action.payload];
-     
-      // let favorite = JSON.parse(localStorage.getItem("favorite")) || [];
-
-     
-      // const index = favorite.indexOf(action.payload);
-      // if (index === -1) {
-       
-      //   favorite.push(action.payload);
-      // } else {
-       
-      //   favorite.splice(index, 1);
-      // }
-
-      if (product) {
-        product.isFavorite = !product.isFavorite;
+      state.products = {
+        ...state.products,
+        [action.payload]: {
+          ...state.products[action.payload],
+          isFavorite: !state.products[action.payload].isFavorite,
+        },
+      };
+      const index = state.favorites.findIndex(
+        (item) => item._id === action.payload
+      );
+      if (index >= 0) {
+        state.favorites = state.favorites.filter(
+          (item) => item._id !== action.payload
+        );
+      } else {
+        state.favorites = [...state.favorites, state.products[action.payload]];
       }
+    },
+    addToCart: (state, action) => {
+      const index = state.cart.findIndex((item) => item._id === action.payload);
 
-      // localStorage.setItem("favorite", JSON.stringify(favorite));
-
-      state.products[action.payload] = product;
+      if (index >= 0) {
+        state.cart = state.cart.map((item) => {
+          if (item._id === action.payload) {
+            item.count += 1;
+          }
+          return item;
+        });
+      } else {
+        const product = { ...state.products[action.payload], count: 1 };
+        state.cart = [...state.cart, product];
+      }
+    },
+    removeFromCart: (state, action) => {
+      state.cart = state.cart.filter((item) => item._id !== action.payload);
+    },
+    clearCart: (state) => {
+      state.cart = [];
+    },
+    updateQuantity: (state, action) => {
+      const { id, count } = action.payload;
+      const item = state.cart.find((item) => item._id === id);
+      if (item) {
+        item.count = count;
+      }
     },
   },
   extraReducers: (builder) => {
@@ -86,16 +68,11 @@ const productsSlice = createSlice({
     });
     builder.addCase(fetchProducts.fulfilled, (state, action) => {
       state.loading = false;
-      const favorite = JSON.parse(localStorage.getItem("favorite"));
-      state.products = action.payload.reduce((acc, current) => {
+      const products = action.payload.reduce((acc, current) => {
         acc[current._id] = current;
-        if (favorite.includes(current._id)) {
-          acc[current._id].isFavorite = true;
-        } else {
-          acc[current._id].isFavorite = false;
-        }
         return acc;
       }, {});
+      state.products = products;
     });
     builder.addCase(fetchProducts.rejected, (state, action) => {
       state.loading = false;
@@ -109,12 +86,32 @@ const productsSlice = createSlice({
       state.loading = false;
       state.product = action.payload;
     });
+
     builder.addCase(fetchProductById.rejected, (state, action) => {
+      state.loading = false;
+      state.error = action.payload;
+    });
+    builder.addCase(fetchAddToCart.pending, (state) => {
+      state.loading = true;
+      state.error = null;
+    });
+    builder.addCase(fetchAddToCart.fulfilled, (state, action) => {
+      state.loading = false;
+      console.log(action.payload);
+      state.cart = action.payload.carts;
+    });
+    builder.addCase(fetchAddToCart.rejected, (state, action) => {
       state.loading = false;
       state.error = action.payload;
     });
   },
 });
 
-export const { toggleFavorite } = productsSlice.actions;
+export const {
+  toggleFavorite,
+  addToCart,
+  removeFromCart,
+  clearCart,
+  updateQuantity,
+} = productsSlice.actions;
 export default productsSlice.reducer;

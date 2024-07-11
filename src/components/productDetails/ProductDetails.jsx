@@ -11,7 +11,7 @@ import "react-medium-image-zoom/dist/styles.css";
 const ProductDetails = () => {
   const dispatch = useAppDispatch();
   const productSize = useAppSelector((state) => state.products.product);
-  console.log(productSize);
+ 
   const isLoading = useAppSelector((state) => state.products.loading);
 
   // const productSize = {
@@ -48,7 +48,7 @@ const ProductDetails = () => {
 
   const [size, setSize] = useState("double");
   const ratingChanged = (newRating) => {
-    console.log(newRating);
+   
   };
 
   const { slug } = useParams();
@@ -73,17 +73,7 @@ const ProductDetails = () => {
       title: "double",
     },
   ];
-  // const obj = {
-  //   name: "Tdip",
-  //   numer: 33,
-  //   status: "colorRed",
-  // };
-
-  // const handle = (obj) => ({
-  //   numer: obj.numer,
-  //   status: obj.status,
-  // });
-  // const handlLA = ({ name, ...rest }) => rest;
+  
   return (
     <div className="mx-auto my-0 max-w-5xl px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

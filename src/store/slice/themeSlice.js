@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   currentTheme: "dark",
+  showSplash: true,
 };
 
 export const themeSlice = createSlice({
@@ -11,8 +12,13 @@ export const themeSlice = createSlice({
     toggleTheme: (state) => {
       state.currentTheme = state.currentTheme === "dark" ? "light" : "dark";
     },
+    setShowSplash: (state, action) => {
+     
+      state.showSplash = action.payload;
+    },
   },
 });
 
-export const { toggleTheme } = themeSlice.actions;
+export const { toggleTheme, setShowSplash } = themeSlice.actions;
+
 export default themeSlice.reducer;

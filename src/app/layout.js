@@ -19,3 +19,37 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+// import { useEffect } from 'react';
+// import { useStore } from '../store'; // Импортируйте свой store
+// import { PersistGate } from 'redux-persist/integration/react';
+// import { Provider } from 'react-redux';
+// import { useRouter } from 'next/router';
+
+// const MyApp = ({ Component, pageProps }) => {
+//   const store = useStore(pageProps.initialReduxState);
+//   const { persistor, store: reduxStore } = store;
+
+//   const router = useRouter();
+
+//   useEffect(() => {
+//     const handleRouteChange = () => {
+//       persistor.persist();
+//     };
+
+//     router.events.on('routeChangeComplete', handleRouteChange);
+//     return () => {
+//       router.events.off('routeChangeComplete', handleRouteChange);
+//     };
+//   }, [router.events, persistor]);
+
+//   return (
+//     <Provider store={reduxStore}>
+//       <PersistGate loading={null} persistor={persistor}>
+//         <Component {...pageProps} />
+//       </PersistGate>
+//     </Provider>
+//   );
+// };
+
+// export default MyApp;

@@ -1,34 +1,33 @@
 "use client";
 import { useAppSelector } from "@/store/hooks";
 import Link from "next/link";
-import React, { useState } from "react";
-// import LanguageChanger from "../Language/LanguageChanger";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import Popup from "../popup";
-
-const i18nNamespaces = ["header"];
 
 const NavBar = () => {
   const { i18n } = useTranslation();
   const currentLocale = i18n.language;
-  const [isPopup, setPopup] = useState(false);
   const user = useAppSelector((state) => state.session.user);
+  const cartItemCount = useAppSelector((state) =>
+    state.products.cart.reduce((total, item) => total + item.count, 0)
+  );
+
   const linkConfig = [
     {
       title: "/img/information.png",
       link: `/${currentLocale}/information`,
       id: "information",
-      label: "Information",
+      label: "Inform",
     },
     {
       title: "/img/pamphlet.png",
-      link: `/${currentLocale}/pamphlet`,
-      id: "pamphlet",
-      label: "Pamphlet",
+      link: `/en/payment`,
+      id: "payment",
+      label: "Payment",
     },
     {
       title: "/img/profile.png",
-      onClick: (id) => setPopup(id),
+      link: `/${currentLocale}/signin`,
       id: "profile",
       label: "Profile",
     },
@@ -55,57 +54,34 @@ const NavBar = () => {
               key={item.id}
               className="relative group flex flex-col items-center"
             >
-              {item.link && (
-                <Link href={item.link} className="flex flex-col items-center">
-                  <div className="relative">
-                    <img
-                      src={item.title}
-                      className={`transition-transform duration-300 ease-in-out transform hover:scale-105 ${
-                        item.id !== "profile"
-                          ? "h-12 w-12 border border-gray-200 rounded-lg shadow-sm"
-                          : ""
-                      }`}
-                    />
-                  </div>
-                  <div
-                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 
-                      ease-in-out text-gray-700 text-xs bg-white p-1 rounded shadow-md mt-1"
-                  >
-                    {item.label}
-                  </div>
-                </Link>
-              )}
-              {item.onClick && (
-                <div className="flex flex-col items-center cursor-pointer">
-                  <div className="relative">
-                    <img
-                      src={item.title}
-                      onClick={() => item.onClick(item.id)}
-                      className={`transition-transform duration-300 ease-in-out transform hover:scale-105 ${
-                        item.id === "profile"
-                          ? "h-12 w-12 border border-gray-200 rounded-lg shadow-sm"
-                          : ""
-                      }`}
-                    />
-                  </div>
-                  <div
-                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 
-                      ease-in-out text-gray-700 text-xs bg-white p-1 rounded shadow-md mt-1"
-                  >
-                    {item.label}
-                  </div>
+              <Link href={item.link} className="flex flex-col items-center">
+                <div className="relative">
+                  <img
+                    src={item.title}
+                    className="h-12 w-12 border border-gray-200 rounded-lg shadow-sm transition-transform duration-300 ease-in-out transform hover:scale-105"
+                  />
+                  {item.id === "cart" && cartItemCount > 0 && (
+                    <span className="absolute top-0 right-0 rounded-full bg-red-500 text-white text-xs w-6 h-6 flex items-center justify-center">
+                      {cartItemCount}
+                    </span>
+                  )}
                 </div>
-              )}
+                <div
+                  className="opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                      ease-in-out text-gray-700 text-xs bg-white p-1 rounded shadow-md mt-1"
+                >
+                  {item.label}
+                </div>
+              </Link>
             </li>
           ))}
         </ul>
       )}
       {user && (
-        <Link href="/profile" className="ml-auto">
+        <Link href={`/${currentLocale}/profile`} className="ml-auto">
           Cabinet
         </Link>
       )}
-      {isPopup && <Popup id={isPopup} />}
     </div>
   );
 };

@@ -1,16 +1,16 @@
 "use client";
 import { fetchProducts } from "@/store/slice/fetchSliceProductAsync";
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import ProductCard from "../productCard";
 import Loader from "../loader";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
 
 const ProductsList = () => {
-  const dispatch = useDispatch();
-  const products = useSelector((state) =>
+  const dispatch = useAppDispatch();
+  const products = useAppSelector((state) =>
     Object.values(state.products.products)
   );
-  const isLoader = useSelector((state) => state.products.loading);
+  const isLoader = useAppSelector((state) => state.products.loading);
 
   useEffect(() => {
     localStorage.setItem("favorite", JSON.stringify([]));
@@ -23,7 +23,7 @@ const ProductsList = () => {
   if (isLoader) {
     return <Loader />;
   }
-  console.log(products, 555);
+  
   return (
     <div>
       <ul className="grid grid-cols-4 grid-row[auto] gap-7 items-stretch">
